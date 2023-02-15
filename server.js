@@ -8,16 +8,18 @@ function menu() {
   }).then(answers => {
     console.log(answers)
     switch (answers.task) {
-      case 'view departments': 
+      case 'View departments': 
           viewDepartments()
         break;
-        case 'view roles': 
+        case 'View roles': 
           viewRoles()
         break;
-        case 'view employees': 
+        case 'View employees': 
           viewEmployees()
         break;
-    
+        case "exit":
+            db.end();
+    break;
       default:
         break;
     }

@@ -1,30 +1,28 @@
-
-INSERT INTO department (dept_name)
-VALUES
-('CEO')
+-- Insert departments
+INSERT INTO department (dept_name) VALUES
+('CEO'),
 ('Sales'),
 ('Software Development'),
 ('Legal'),
 ('Finance');
-
-INSERT INTO roles (title, salary, dept_id)
-VALUES ('CHEIF of ALL', 1000000, 1),
-('Sales', 100000, 2),
+-- Insert roles
+INSERT INTO roles (title, salary, dept_id) VALUES
+('CEO', 1000000, 1),
+('Sales Manager', 100000, 2),
 ('Chief Engineer', 300000, 3),
-('Software Dev',80000, 3),
-('Chief Admin', 1300000, 4),
+('Software Developer', 80000, 3),
+('Legal Manager', 1300000, 4),
 ('Accountant', 60000, 4),
-('Legalman', 100000, 3),
-('Legal Chief', 180000,3)
+('Legal Counsel', 100000, 3),
+('Legal Analyst', 180000, 3);
 
-
-
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ('Tomy', 'Stark',1, 1,),
+-- Insert employees
+INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES
+('Tony', 'Stark', 1, NULL),
 ('Foster', 'Freeze', 2, 3),
-('Mark', 'Sal', 4, NULL),
-('Ashley', 'Rodriguez', 4, 3),
-('Kunal', 'Singh', 5, NULL),
-('Malia', 'Brown', 5, 5),
-('Sarah', 'Lourd', 3, NULL),
+('Mark', 'Sal', 4, 1),
+('Abraham', 'Lincoln', 4, 3),
+('Doctor', 'Phill', 5, NULL),
+('Will', 'Smith', 5, 1),
+('Loud', 'Louis', 3, NULL),
 ('James', 'Brown', 3, 2);
